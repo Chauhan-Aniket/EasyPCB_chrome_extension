@@ -1,9 +1,18 @@
 {
 	"name": "EasyPCB",
 	"version": "0.0.1",
-	"manifest_version": 2,
-	"browser_action": {
+	"manifest_version": 3,
+	"background": {
+		"service_worker": "background.js"
+	},
+	"action": {
 		"default_popup": "popup.html"
 	},
-	"permissions": ["activeTab"]
+	"content_scripts": [
+		{
+			"matches": ["https://*.easyeda.com/*"],
+			"js": ["content-script.js"]
+		}
+	],
+	"permissions": ["activeTab", "storage"]
 }
