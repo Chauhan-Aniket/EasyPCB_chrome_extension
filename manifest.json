@@ -14,5 +14,5 @@
 			"js": ["content-script.js"]
 		}
 	],
-	"permissions": ["activeTab", "storage"]
+	"permissions": ["activeTab", "storage", "scripting"]
 }
