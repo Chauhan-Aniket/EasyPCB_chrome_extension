@@ -35,7 +35,7 @@ function onDocumentDrop(event) {
 
 	reader.onload = function (event) {
 		pcbImg.src = event.target.result;
-		document.querySelector("body").appendChild(pcbImg);
+		document.body.appendChild(pcbImg);
 	};
 	console.log(event.dataTransfer.files[0]);
 
